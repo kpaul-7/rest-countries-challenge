@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rest-countries-challenge/static/css/main.25ffb7bd.css",
+    "main.js": "/rest-countries-challenge/static/js/main.5dd0a190.js",
+    "static/js/787.7ab103b3.chunk.js": "/rest-countries-challenge/static/js/787.7ab103b3.chunk.js",
+    "index.html": "/rest-countries-challenge/index.html",
+    "main.25ffb7bd.css.map": "/rest-countries-challenge/static/css/main.25ffb7bd.css.map",
+    "main.5dd0a190.js.map": "/rest-countries-challenge/static/js/main.5dd0a190.js.map",
+    "787.7ab103b3.chunk.js.map": "/rest-countries-challenge/static/js/787.7ab103b3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25ffb7bd.css",
+    "static/js/main.5dd0a190.js"
+  ]
+}
