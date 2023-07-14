@@ -1,0 +1,8 @@
+.Dark {
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.Light {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkBlue);
+}

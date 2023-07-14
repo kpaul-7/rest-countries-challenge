@@ -1,0 +1,25 @@
+.Dark {
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.Light {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkBlue);
+}
+.Navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 16px;
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  margin-bottom: 16px;
+}
+.ModeSelection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.Logo p {
+  font-weight: 800;
+}

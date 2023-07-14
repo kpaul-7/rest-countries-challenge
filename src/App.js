@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useMediaQuery } from "react-responsive";
+import { Route, Routes } from "react-router";
+import LayoutMobile from "./components/Mobile/Layout/Layout";
+import CountryDetails from "./components/Mobile/CountyDetails/CountryDetails";
 
-function App() {
+const App = () => {
+  const isMobile = useMediaQuery({
+    query: "(max-width:600px)",
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={isMobile ? <LayoutMobile /> : "desktop"} />
+      <Route
+        path="/:country"
+        element={isMobile ? <CountryDetails /> : "Desktop"}
+      />
+    </Routes>
   );
-}
-
+};
 export default App;
