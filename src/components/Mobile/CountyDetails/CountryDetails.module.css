@@ -54,6 +54,8 @@
 }
 .Bordersection {
   margin: 16px;
+  margin-bottom: 0;
+  padding-bottom: 16px;
 }
 .BorderHeading {
   font-weight: 600;
@@ -62,6 +64,6 @@
 .BorderCountry {
   box-shadow: #64646f33 0px 7px 29px 0px;
   padding: 8px 20px;
-  width: 100px;
+  min-width: 80px;
   border-radius: 8px;
 }

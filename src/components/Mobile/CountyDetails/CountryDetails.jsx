@@ -16,8 +16,11 @@ const CountryDetails = () => {
     const fetchCountry = async () => {
       try {
         setLoading(true);
+        // const response = await axios.get(
+        //   `https://restcountries.com/v3.1/name/${viewedCountry}`
+        // );
         const response = await axios.get(
-          `https://restcountries.com/v3.1/name/${viewedCountry}`
+          `https://restcountries.com/v2/name/${viewedCountry}`
         );
         setLoading(false);
         setCountry(response?.data);
@@ -31,7 +34,7 @@ const CountryDetails = () => {
   let languages = "";
   if (country) {
     for (let lan in country[0]?.languages) {
-      languages += country[0]?.languages[lan] + ", ";
+      languages += country[0]?.languages[lan].name + ", ";
     }
   }
   let displayElement = "";
@@ -53,7 +56,9 @@ const CountryDetails = () => {
           <div className={style.Details}>
             <div className={style.FirstDetails}>
               <p className={style.Countryname}>{country[0]?.name.common}</p>
-              <p>Native Name: </p>
+              <p>
+                <span>Native Name:</span> {country[0].nativeName}
+              </p>
               <p>
                 <span>Population:</span> {country[0].population}
               </p>
@@ -64,15 +69,16 @@ const CountryDetails = () => {
                 <span>Sub Region:</span> {country[0].subregion}
               </p>
               <p>
-                <span>Capital:</span> {country[0].capital[0]}
+                <span>Capital:</span> {country[0].capital}
               </p>
             </div>
             <div>
               <p>
-                <span>Top Level Domain:</span> {}
+                <span>Top Level Domain:</span>{" "}
+                {country[0].topLevelDomain.join(", ")}
               </p>
               <p>
-                <span>Currencies:</span> {country.currencies}
+                <span>Currencies:</span> {country[0].currencies[0].code}
               </p>
               <p>
                 <span>Languages:</span> {languages}
@@ -87,6 +93,7 @@ const CountryDetails = () => {
                   <p>{bor}</p>
                 </div>
               ))}
+              {!country[0]?.borders && <p>No country found</p>}
             </div>
           </div>
         </Fragment>

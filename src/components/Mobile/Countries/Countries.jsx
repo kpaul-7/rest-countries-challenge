@@ -10,7 +10,9 @@ const Countries = () => {
     const fetchCountry = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("https://restcountries.com/v3.1/all");
+        const response = await axios.get(
+          "https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital"
+        );
         setCountries(response?.data);
         setLoading(false);
       } catch (err) {
