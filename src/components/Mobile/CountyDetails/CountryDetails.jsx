@@ -16,9 +16,6 @@ const CountryDetails = () => {
     const fetchCountry = async () => {
       try {
         setLoading(true);
-        // const response = await axios.get(
-        //   `https://restcountries.com/v3.1/name/${viewedCountry}`
-        // );
         const response = await axios.get(
           `https://restcountries.com/v2/name/${viewedCountry}`
         );
@@ -27,6 +24,7 @@ const CountryDetails = () => {
       } catch (err) {
         console.log(err);
         setLoading(false);
+        setCountry([]);
       }
     };
     fetchCountry();
@@ -34,7 +32,7 @@ const CountryDetails = () => {
   let languages = "";
   if (country) {
     for (let lan in country[0]?.languages) {
-      languages += country[0]?.languages[lan].name + ", ";
+      languages += country[0]?.languages[lan]?.name + ", ";
     }
   }
   let displayElement = "";
@@ -51,11 +49,11 @@ const CountryDetails = () => {
             </Link>
           </div>
           <div className={style.Img}>
-            <img src={country[0].flags.png} alt="" />
+            <img src={country[0].flags?.png} alt="" />
           </div>
           <div className={style.Details}>
             <div className={style.FirstDetails}>
-              <p className={style.Countryname}>{country[0]?.name.common}</p>
+              <p className={style.Countryname}>{country[0]?.name}</p>
               <p>
                 <span>Native Name:</span> {country[0].nativeName}
               </p>
@@ -78,7 +76,7 @@ const CountryDetails = () => {
                 {country[0].topLevelDomain.join(", ")}
               </p>
               <p>
-                <span>Currencies:</span> {country[0].currencies[0].code}
+                <span>Currencies:</span> {country[0]?.currencies[0]?.code}
               </p>
               <p>
                 <span>Languages:</span> {languages}

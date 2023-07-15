@@ -6,3 +6,7 @@
   background-color: var(--veryLightGray);
   color: var(--veryDarkBlue);
 }
+.Layout {
+  min-width: 100vw;
+  min-height: 100vh;
+}

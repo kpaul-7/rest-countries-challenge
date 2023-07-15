@@ -8,7 +8,7 @@ const Layout = () => {
   const theme = useSelector((state) => state.theme.theme);
   const themeClass = theme === "Dark" ? style.Dark : style.Light;
   return (
-    <div className={themeClass}>
+    <div className={`${style.Layout} ${themeClass}`}>
       <Navbar />
       <Search />
       <Filter />
