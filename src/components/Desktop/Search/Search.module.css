@@ -1,0 +1,34 @@
+.Dark {
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.Light {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkBlue);
+}
+.Search {
+  margin-bottom: 16px;
+}
+.SearchDiv {
+  /* margin: 0 16px; */
+  position: relative;
+}
+.SearchDiv input {
+  padding: 16px;
+  padding-left: 60px;
+  width: 100%;
+  display: block;
+  border: none;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  outline: none;
+  border-radius: 8px;
+}
+.SearchDiv i {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.Dark ::placeholder {
+  color: var(--white);
+}

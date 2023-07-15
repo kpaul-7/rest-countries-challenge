@@ -1,0 +1,96 @@
+.Dark {
+  background-color: var(--darkBlue);
+  color: var(--white);
+}
+.Light {
+  background-color: var(--veryLightGray);
+  color: var(--veryDarkBlue);
+}
+.CountryDetails {
+  min-height: 100vh;
+}
+.Back {
+  padding: 8px 16px;
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  width: fit-content;
+  margin: 16px 5%;
+  width: 200px;
+}
+.Back a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.Back i {
+  display: block;
+  margin-right: 16px;
+}
+.FlexWrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 5%;
+}
+.Img {
+  /* margin: 16px; */
+  min-width: 420px;
+}
+.Img img {
+  margin-top: 20px;
+  width: 100%;
+}
+.Details {
+  /* margin: 16px; */
+  flex-grow: 1;
+}
+.DetailsWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.Details span {
+  font-weight: 600;
+}
+.Countryname {
+  font-weight: 800;
+  font-size: 1.3em;
+  margin-bottom: 16px;
+}
+.FirstDetails {
+  margin-bottom: 20px;
+}
+.Borders {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.Bordersection {
+  /* margin: 16px; */
+  margin-bottom: 0;
+  padding-bottom: 16px;
+}
+.BorderHeading {
+  font-weight: 600;
+}
+.BorderCountry {
+  box-shadow: #64646f33 0px 7px 29px 0px;
+  padding: 8px 20px;
+  min-width: 80px;
+  border-radius: 8px;
+}
+@media screen and (min-width: 1330px) {
+  .CountryDetails {
+    font-size: 1.4em;
+  }
+  .Img {
+    min-width: 600px;
+  }
+  .FlexWrapper {
+    gap: 10%;
+    justify-content: space-around;
+  }
+}

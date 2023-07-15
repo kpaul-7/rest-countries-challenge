@@ -1,0 +1,9 @@
+.Countries {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 16px 5%;
+}
