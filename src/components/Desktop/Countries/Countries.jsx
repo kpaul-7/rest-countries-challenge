@@ -9,6 +9,17 @@ const Countries = () => {
   const [loading, setLoading] = useState(false);
   const searchValue = useSelector((state) => state.search.country);
   const regionValue = useSelector((state) => state.region.regionName);
+  
+  const sortCountries = (countries) => {
+    let sorted = countries;
+    sorted.sort((a, b) => {
+      if (a.name.common > b.name.common) return 1;
+      else if (a.name.common < b.name.common) return -1;
+      else return 0;
+    })
+    return sorted;
+  }
+  
   useEffect(() => {
     const fetchCountry = async () => {
       setLoading(true);
@@ -31,12 +42,12 @@ const Countries = () => {
                 .toLowerCase()
                 .includes(searchValue.toLowerCase());
             });
-            setCountries(filteredCountries);
+            setCountries(sortCountries(filteredCountries));
           } else {
-            setCountries(response?.data);
+            setCountries(sortCountries(response?.data));
           }
         } else {
-          setCountries(response?.data);
+          setCountries(sortCountries(response?.data));
         }
         setLoading(false);
       } catch (err) {
