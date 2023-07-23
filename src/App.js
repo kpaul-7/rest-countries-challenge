@@ -1,9 +1,9 @@
 import { useMediaQuery } from "react-responsive";
 import { Route, Routes } from "react-router";
 import LayoutMobile from "./components/Mobile/Layout/Layout";
-import CountryDetailsMobile from "./components/Mobile/CountyDetails/CountryDetails";
+import CountryDetailsMobile from "./components/Mobile/CountryDetails/CountryDetails";
 import LayoutDesktop from "./components/Desktop/Layout/Layout";
-import CountryDetailsDesktop from "./components/Desktop/CountyDetails/CountryDetails";
+import CountryDetailsDesktop from "./components/Desktop/CountryDetails/CountryDetails";
 
 const App = () => {
   const isMobile = useMediaQuery({
