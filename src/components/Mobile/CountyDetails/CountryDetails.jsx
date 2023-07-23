@@ -17,7 +17,7 @@ const CountryDetails = () => {
       try {
         setLoading(true);
         const response = await axios.get(
-          `https://restcountries.com/v2/name/${viewedCountry}`
+          `https://restcountries.com/v2/name/${viewedCountry}?fullText=true`
         );
         setLoading(false);
         setCountry(response?.data);
